@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:select="http://schemas.android.com/apk/res/com.BC.entertainmentgravitation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dip"
+        android:gravity="right" >
+
+        <com.BC.entertainmentgravitation.view.BaseSelectItem
+            android:id="@+id/region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            select:content="全部"
+            select:dialogContent="@layout/wheel_city2"
+            select:title="选择地区" >
+        </com.BC.entertainmentgravitation.view.BaseSelectItem>
+    </LinearLayout>
+
+    <com.BC.androidtool.views.pull.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pullToRefreshListView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:dividerHeight="0px"
+        android:layoutAnimation="@anim/layout_anim_ctrl"
+        android:listSelector="#00000000"
+        ptr:dividerHeight="1px"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        ptr:scrollbars="false" >
+    </com.BC.androidtool.views.pull.PullToRefreshListView>
+
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.BC.androidtool.views.RadioGroupLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RadioGroup01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton11"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton12"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton13"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+
+        <RadioButton
+            android:id="@+id/radioButton14"
+            style="@style/routine_select_btn_style2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="iPhone" />
+    </LinearLayout>
+
+</com.BC.androidtool.views.RadioGroupLayout>
+

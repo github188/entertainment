@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:select="http://schemas.android.com/apk/res/com.BC.entertainmentgravitation"
+    android:id="@+id/bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="450dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/black"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/item_dialog_gift" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_dialog_gift2" />
+
+            <com.BC.entertainmentgravitation.view.BaseSelectItem
+                android:id="@+id/region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                select:content="请点击选择"
+                select:dialogContent="@layout/wheel_city2"
+                select:title="选择地区" >
+            </com.BC.entertainmentgravitation.view.BaseSelectItem>
+
+            <Button
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/red2"
+                android:padding="6dip"
+                android:text="点击选择权益标签"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingBottom="3dip" >
+
+                <Button
+                    android:id="@+id/negativeButton"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/icin_close" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请描述你在1小时内的权益内容是？"
+                        android:textColor="@color/black"
+                        android:textSize="12dip" />
+
+                    <EditText
+                        android:id="@+id/describe"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="请描述1小时内的内容是？\n列如：入行以来的经验之谈……\n专业技术方面的个人领悟分享……\n专属机会（如：探班）的发放\n专属物品（如：私物）的收藏\n出场费（如：接拍电影电视剧类等）的售卖"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="12dip"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/target"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dip"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint=""
+                        android:textSize="12dip"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip" >
+
+                <Button
+                    android:id="@+id/relest"
+                    android:layout_width="0dip"
+                    android:layout_height="25dip"
+                    android:layout_weight="1"
+                    android:background="@color/red2"
+                    android:text="发布"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

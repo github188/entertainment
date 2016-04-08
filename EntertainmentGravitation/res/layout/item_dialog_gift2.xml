@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:select="http://schemas.android.com/apk/res/com.BC.entertainmentgravitation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <!--
+             <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="总量"
+            android:textColor="@color/white" />
+        -->
+
+        <com.BC.entertainmentgravitation.view.BaseSelectItem
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            select:content="01"
+            select:dialogContent="@layout/wheel_select2"
+            select:title="总量           " >
+        </com.BC.entertainmentgravitation.view.BaseSelectItem>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="    小时"
+            android:textColor="@color/white"
+            android:textSize="15dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal" >
+
+        <!--
+             <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="总量"
+            android:textColor="@color/white" />
+        -->
+
+        <com.BC.entertainmentgravitation.view.BaseSelectItem
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            select:content="0001"
+            select:dialogContent="@layout/wheel_select4"
+            select:title="1小时/    " >
+        </com.BC.entertainmentgravitation.view.BaseSelectItem>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="    红包"
+            android:textColor="@color/white"
+            android:textSize="15dip" />
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1小时/"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="0dip"
+            android:layout_height="21dip"
+            android:layout_weight="2"
+            android:background="@drawable/edit_bg_11"
+            android:gravity="center"
+            android:hint="1~1000"
+            android:text=""
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="红包"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    -->
+
+</LinearLayout>

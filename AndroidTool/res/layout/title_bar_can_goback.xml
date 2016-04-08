@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="45dip"
+    android:background="#cc0c0b" >
+
+    <Button
+        android:id="@+id/nav_back_view"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:background="@drawable/return_button" />
+
+    <TextView
+        android:id="@+id/titleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="21dip" />
+
+    <Button
+        android:id="@+id/nav_home_view"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/red_button"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonTypefaces2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/red_button"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/nav_iamge_button"
+        android:layout_width="40dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dip"
+        android:background="#00000000"
+        android:scaleType="fitEnd"
+        android:src="@drawable/top_icon1"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/nav_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:text="" />
+
+</RelativeLayout>

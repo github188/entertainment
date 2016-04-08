@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="172dip"
+    android:layout_height="100dip"
+    android:background="@drawable/wait_bg" >
+
+    <ImageView
+        android:id="@+id/loadingImageView"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/web_loading" />
+
+    <ImageView
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/web_word" />
+
+    <TextView
+        android:id="@+id/id_tv_loadingmsg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadingImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dip"
+        android:gravity="center"
+        android:text="加载中..."
+        android:textColor="#ffffff"
+        android:textSize="15dip" />
+
+</RelativeLayout>

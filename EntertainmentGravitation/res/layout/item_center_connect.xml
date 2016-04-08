@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/baidu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="3dip" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/baidu" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="百度贴吧" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/QQ"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="3dip" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/kongjian" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QQ空间" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sina"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="3dip" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:src="@drawable/xinlang" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新浪微博" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:text="视屏连接地址："
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dip"
+                android:layout_weight="1"
+                android:text="其他连接地址："
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <com.BC.androidtool.views.pull.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pullToRefreshListView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:dividerHeight="0px"
+                android:layoutAnimation="@anim/layout_anim_ctrl"
+                android:listSelector="#00000000"
+                ptr:dividerHeight="1px"
+                ptr:ptrAnimationStyle="flip"
+                ptr:ptrMode="both"
+                ptr:scrollbars="false" >
+            </com.BC.androidtool.views.pull.PullToRefreshListView>
+
+            <com.BC.androidtool.views.pull.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pullToRefreshListView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:dividerHeight="0px"
+                android:layoutAnimation="@anim/layout_anim_ctrl"
+                android:listSelector="#00000000"
+                ptr:dividerHeight="1px"
+                ptr:ptrAnimationStyle="flip"
+                ptr:ptrMode="both"
+                ptr:scrollbars="false" >
+            </com.BC.androidtool.views.pull.PullToRefreshListView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/editConnect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/item_center_connect_edit"
+        android:background="@color/blackcover"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="100dip"
+            android:layout_height="30dip"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="10dip"
+            android:background="@color/white"
+            android:text="添加"
+            android:textColor="#e1157f" />
+    </LinearLayout>
+
+</RelativeLayout>
