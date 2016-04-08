@@ -36,5 +36,6 @@
     <color name="textcolor2">#D4D4D4</color>
     <color name="textcolor3">#EEEEEE</color>
     <color name="listselector">#ffff66</color>
+    <color name="navpage">#ffffffff</color>
 
 </resources>

@@ -35,7 +35,6 @@ import com.BC.androidtool.view.CircularImage;
 import com.BC.entertainmentgravitation.R;
 import com.BC.entertainmentgravitation.HttpThread.InfoSource;
 import com.BC.entertainmentgravitation.HttpThread.SimpleHttpTask;
-import com.BC.entertainmentgravitation.IM.LoginIM;
 import com.BC.entertainmentgravitation.fragment.JiaGeQuXianFragment2;
 import com.BC.entertainmentgravitation.json.Ranking;
 import com.BC.entertainmentgravitation.json.Search;
@@ -51,15 +50,13 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.utils.StorageUtils;
-import com.yuntongxun.kitsdk.core.CCPAppManager;
-import com.yuntongxun.kitsdk.core.ECKitConstant;
-import com.yuntongxun.kitsdk.ui.ECChattingActivity;
 
 public class MainActivity extends BaseActivity implements OnClickListener,
 		UpdataMainActivity {
@@ -87,6 +84,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 	private ImageButton previous, next;
 
 	private static Activity main;
+	public static Md5FileNameGenerator md5FileNameGenerator = new Md5FileNameGenerator();
 
 	// private AnimationDrawable animationDrawable, animationDrawable2;
 
@@ -114,21 +112,21 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 		int icon = R.drawable.app_logo;
 		CharSequence tickerText = "我的通知栏标题";
 		long when = System.currentTimeMillis();
-		Notification notification = new Notification(icon, tickerText, when);
-
-		// 定义下拉通知栏时要展现的内容信息
-		CharSequence contentTitle = "海绵娱";
-		CharSequence contentText = message;
-		Intent notificationIntent = new Intent(main, ECChattingActivity.class);
-		notificationIntent.putExtra(ECKitConstant.KIT_CONVERSATION_TARGET, id);
-		notificationIntent.putExtra(ECChattingActivity.CONTACT_USER, "海绵娱用户");
-		PendingIntent contentIntent = PendingIntent.getActivity(main, 0,
-				notificationIntent, 0);
-		notification.setLatestEventInfo(main, contentTitle, contentText,
-				contentIntent);
-
-		// 用mNotificationManager的notify方法通知用户生成标题栏消息通知
-		mNotificationManager.notify(1, notification);
+//		Notification notification = new Notification(icon, tickerText, when);
+//
+//		// 定义下拉通知栏时要展现的内容信息
+//		CharSequence contentTitle = "海绵娱";
+//		CharSequence contentText = message;
+//		Intent notificationIntent = new Intent(main, ECChattingActivity.class);
+//		notificationIntent.putExtra(ECKitConstant.KIT_CONVERSATION_TARGET, id);
+//		notificationIntent.putExtra(ECChattingActivity.CONTACT_USER, "海绵娱用户");
+//		PendingIntent contentIntent = PendingIntent.getActivity(main, 0,
+//				notificationIntent, 0);
+//		notification.setLatestEventInfo(main, contentTitle, contentText,
+//				contentIntent);
+//
+//		// 用mNotificationManager的notify方法通知用户生成标题栏消息通知
+//		mNotificationManager.notify(1, notification);
 	}
 
 	@Override
@@ -199,42 +197,13 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 		sendReqUser();
 		sendReqConnect();
 		sendReqActivities();
-		initImageLoader();
-		// AnimationDrawable animationDrawable = (AnimationDrawable) imageView6
-		// .getDrawable();
-		// animationDrawable.start();
+//		initImageLoader();
 
-		// animationDrawable = (AnimationDrawable) getResources().getDrawable(
-		// R.drawable.circle2);
-		// animationDrawable2 = (AnimationDrawable) getResources().getDrawable(
-		// R.drawable.circle3);
-		// imageView6.setImageDrawable(animationDrawable);
-		// // next.setImageDrawable(animationDrawable2);
-		// details.setBackground(animationDrawable2);
-		// animationDrawable.start();
-		// animationDrawable2.start();
 		jiaGeQuXianFragment.setUpdataMainActivity(this);
 
-		LoginIM loginIM = new LoginIM(getApplicationContext());
-		loginIM.execute();
+//		LoginIM loginIM = new LoginIM(getApplicationContext());
+//		loginIM.execute();
 
-		/*BaiduMapUtil bdmu = BaiduMapUtil.newInstance(this);
-		bdmu.setGetGeoCodeResultListener(new OnGetGeoCoderResultListener() {
-
-			@Override
-			public void onGetReverseGeoCodeResult(ReverseGeoCodeResult arg0) {
-				// TODO Auto-generated method stub
-				BaiduMapUtil.newInstance(MainActivity.this)
-						.setNowAddressComponent(arg0.getAddressDetail());
-			}
-
-			@Override
-			public void onGetGeoCodeResult(GeoCodeResult arg0) {
-				// TODO Auto-generated method stub
-
-			}
-		});
-		bdmu.shareAddr();*/
 	}
 
 	@Override
@@ -675,26 +644,26 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 		sendReqUser();
 	}
 
-	private void initImageLoader() {
-		File cacheDir = StorageUtils.getOwnCacheDirectory(
-				getApplicationContext(), "ECSDK_Demo/image");
-		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-				this).threadPoolSize(1)
-				// 线程池内加载的数量
-				.threadPriority(Thread.NORM_PRIORITY - 2)
-				.memoryCache(new WeakMemoryCache())
-				// .denyCacheImageMultipleSizesInMemory()
-				.diskCacheFileNameGenerator(CCPAppManager.md5FileNameGenerator)
-				// 将保存的时候的URI名称用MD5 加密
-				.tasksProcessingOrder(QueueProcessingType.LIFO)
-				.diskCache(
-						new UnlimitedDiscCache(cacheDir, null,
-								CCPAppManager.md5FileNameGenerator))// 自定义缓存路径
-				.defaultDisplayImageOptions(DisplayImageOptions.createSimple())
-				// .writeDebugLogs() // Remove for release app
-				.build();// 开始构建
-		ImageLoader.getInstance().init(config);
-	}
+//	private void initImageLoader() {
+//		File cacheDir = StorageUtils.getOwnCacheDirectory(
+//				getApplicationContext(), "ECSDK_Demo/image");
+//		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
+//				this).threadPoolSize(1)
+//				// 线程池内加载的数量
+//				.threadPriority(Thread.NORM_PRIORITY - 2)
+//				.memoryCache(new WeakMemoryCache())
+//				// .denyCacheImageMultipleSizesInMemory()
+//				.diskCacheFileNameGenerator(md5FileNameGenerator)
+//				// 将保存的时候的URI名称用MD5 加密
+//				.tasksProcessingOrder(QueueProcessingType.LIFO)
+//				.diskCache(
+//						new UnlimitedDiscCache(cacheDir, null,
+//								md5FileNameGenerator))// 自定义缓存路径
+//				.defaultDisplayImageOptions(DisplayImageOptions.createSimple())
+//				// .writeDebugLogs() // Remove for release app
+//				.build();// 开始构建
+//		ImageLoader.getInstance().init(config);
+//	}
 
 	public void exit() {
 		if (!isExit) {

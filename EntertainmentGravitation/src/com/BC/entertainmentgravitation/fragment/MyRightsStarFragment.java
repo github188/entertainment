@@ -52,11 +52,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.yuntongxun.ecsdk.ECMessage;
-import com.yuntongxun.ecsdk.im.ECTextMessageBody;
-import com.yuntongxun.kitsdk.ECDeviceKit;
-import com.yuntongxun.kitsdk.core.CCPAppManager;
-import com.yuntongxun.kitsdk.ui.chatting.model.IMChattingHelper;
 
 public class MyRightsStarFragment extends BaseFragment {
 
@@ -171,10 +166,10 @@ public class MyRightsStarFragment extends BaseFragment {
 							// ECDeviceKit
 							// .getIMKitManager()
 							// .startConversationActivity(item.getUserID());
-							CCPAppManager.startChattingAction(v.getContext(),
-									item.getUserID(),
-									item.getStage_name().equals("") ? "海绵娱用户"
-											: item.getStage_name());
+//							CCPAppManager.startChattingAction(v.getContext(),
+//									item.getUserID(),
+//									item.getStage_name().equals("") ? "海绵娱用户"
+//											: item.getStage_name());
 						}
 					});
 					break;
@@ -191,10 +186,10 @@ public class MyRightsStarFragment extends BaseFragment {
 							// ECDeviceKit
 							// .getIMKitManager()
 							// .startConversationActivity(item.getUserID());
-							CCPAppManager.startChattingAction(v.getContext(),
-									item.getUserID(),
-									item.getStage_name().equals("") ? "海绵娱用户"
-											: item.getStage_name());
+//							CCPAppManager.startChattingAction(v.getContext(),
+//									item.getUserID(),
+//									item.getStage_name().equals("") ? "海绵娱用户"
+//											: item.getStage_name());
 						}
 					});
 					break;

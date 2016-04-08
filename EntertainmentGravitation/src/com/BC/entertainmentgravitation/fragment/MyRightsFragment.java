@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +14,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -32,25 +32,14 @@ import com.BC.entertainmentgravitation.activity.DetailsActivity;
 import com.BC.entertainmentgravitation.activity.MainActivity;
 import com.BC.entertainmentgravitation.activity.GiftActivity2.GiftChange;
 import com.BC.entertainmentgravitation.json.MyRights;
-import com.BC.entertainmentgravitation.utl.BaiduMapUtil;
 import com.BC.entertainmentgravitation.utl.HttpUtil;
 import com.BC.entertainmentgravitation.utl.ToastUtil;
 import com.BC.entertainmentgravitation.view.BaseSelectItem;
-import com.BC.entertainmentgravitation.view.dialog.ApplaudDialog;
 import com.BC.entertainmentgravitation.view.dialog.WarningDialog;
-import com.baidu.mapapi.search.geocode.GeoCodeResult;
-import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
-import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
-import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult.AddressComponent;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.yuntongxun.ecsdk.ECMessage;
-import com.yuntongxun.ecsdk.im.ECTextMessageBody;
-import com.yuntongxun.kitsdk.ECDeviceKit;
-import com.yuntongxun.kitsdk.core.CCPAppManager;
-import com.yuntongxun.kitsdk.ui.chatting.model.IMChattingHelper;
 
 public class MyRightsFragment extends BaseFragment {
 
@@ -67,6 +56,7 @@ public class MyRightsFragment extends BaseFragment {
 		this.change = change;
 	}
 
+	@SuppressLint("InflateParams")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -193,10 +183,10 @@ public class MyRightsFragment extends BaseFragment {
 							// ECDeviceKit
 							// .getIMKitManager()
 							// .startConversationActivity(item.getUserID());
-							CCPAppManager.startChattingAction(v.getContext(),
-									item.getUserID(),
-									item.getStage_name().equals("") ? "海绵娱用户"
-											: item.getStage_name());
+//							CCPAppManager.startChattingAction(v.getContext(),
+//									item.getUserID(),
+//									item.getStage_name().equals("") ? "海绵娱用户"
+//											: item.getStage_name());
 						}
 					});
 					button3.setOnClickListener(new OnClickListener() {
@@ -247,10 +237,10 @@ public class MyRightsFragment extends BaseFragment {
 							// ECDeviceKit
 							// .getIMKitManager()
 							// .startConversationActivity(item.getUserID());
-							CCPAppManager.startChattingAction(v.getContext(),
-									item.getUserID(),
-									item.getStage_name().equals("") ? "海绵娱用户"
-											: item.getStage_name());
+//							CCPAppManager.startChattingAction(v.getContext(),
+//									item.getUserID(),
+//									item.getStage_name().equals("") ? "海绵娱用户"
+//											: item.getStage_name());
 						}
 					});
 					break;
@@ -410,27 +400,27 @@ public class MyRightsFragment extends BaseFragment {
 		if (text == null) {
 			return;
 		}
-		// 组建一个待发送的ECMessage
-		ECMessage msg = ECMessage.createECMessage(ECMessage.Type.TXT);
-		// 设置消息的属性：发出者，接受者，发送时间等
-		msg.setForm(userID);
-		msg.setMsgTime(System.currentTimeMillis());
-		// 设置消息接收者
-		msg.setTo(mRecipients);
-		msg.setSessionId(mRecipients);
-		// 设置消息发送类型（发送或者接收）
-		msg.setDirection(ECMessage.Direction.SEND);
-		// 创建一个文本消息体，并添加到消息对象中
-		ECTextMessageBody msgBody = new ECTextMessageBody(text.toString());
-		msg.setBody(msgBody);
-		try {
-			// 发送消息，该函数见上
-			long rowId = IMChattingHelper.sendECMessage(msg);
-			// 通知列表刷新
-			msg.setId(rowId);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		// 组建一个待发送的ECMessage
+//		ECMessage msg = ECMessage.createECMessage(ECMessage.Type.TXT);
+//		// 设置消息的属性：发出者，接受者，发送时间等
+//		msg.setForm(userID);
+//		msg.setMsgTime(System.currentTimeMillis());
+//		// 设置消息接收者
+//		msg.setTo(mRecipients);
+//		msg.setSessionId(mRecipients);
+//		// 设置消息发送类型（发送或者接收）
+//		msg.setDirection(ECMessage.Direction.SEND);
+//		// 创建一个文本消息体，并添加到消息对象中
+//		ECTextMessageBody msgBody = new ECTextMessageBody(text.toString());
+//		msg.setBody(msgBody);
+//		try {
+//			// 发送消息，该函数见上
+//			long rowId = IMChattingHelper.sendECMessage(msg);
+//			// 通知列表刷新
+//			msg.setId(rowId);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	OnRefreshListener2<ListView> refreshListener = new OnRefreshListener2<ListView>() {
